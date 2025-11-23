@@ -4,8 +4,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-// Simple factorial using 64-bit unsigned integer.
-// Valid for n in [0, 20]. Larger n will overflow unsigned long long.
 unsigned long long factorial(unsigned int n) {
     unsigned long long result = 1;
     for (unsigned int i = 2; i <= n; ++i)
@@ -28,7 +26,6 @@ int main() {
         cout << "Result will not fit into unsigned long long. Please use a smaller number (<=20).\n";
         return 1;
     }
-
     cout << n << "! = " << factorial(static_cast<unsigned int>(n)) << endl;
     return 0;
 }
